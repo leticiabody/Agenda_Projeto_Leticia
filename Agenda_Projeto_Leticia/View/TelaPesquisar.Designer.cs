@@ -39,6 +39,7 @@
             label5 = new Label();
             txb_BuscaPorNome_TelaPesquisa = new TextBox();
             btn_BuscarTelaPesquisar = new Button();
+            btn_SAIR = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label5);
-            groupBox1.Location = new Point(52, 161);
+            groupBox1.Location = new Point(56, 151);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(348, 216);
             groupBox1.TabIndex = 5;
@@ -145,11 +146,23 @@
             btn_BuscarTelaPesquisar.UseVisualStyleBackColor = true;
             btn_BuscarTelaPesquisar.Click += btn_BuscarTelaPesquisar_Click;
             // 
+            // btn_SAIR
+            // 
+            btn_SAIR.BackColor = Color.IndianRed;
+            btn_SAIR.Location = new Point(378, 13);
+            btn_SAIR.Name = "btn_SAIR";
+            btn_SAIR.Size = new Size(75, 23);
+            btn_SAIR.TabIndex = 9;
+            btn_SAIR.Text = "Sair";
+            btn_SAIR.UseVisualStyleBackColor = false;
+            btn_SAIR.Click += btn_SAIR_Click;
+            // 
             // TelaPesquisar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(456, 410);
+            Controls.Add(btn_SAIR);
             Controls.Add(btn_BuscarTelaPesquisar);
             Controls.Add(txb_BuscaPorNome_TelaPesquisa);
             Controls.Add(label2);
@@ -176,5 +189,6 @@
         private Label label5;
         private TextBox txb_BuscaPorNome_TelaPesquisa;
         private Button btn_BuscarTelaPesquisar;
+        private Button btn_SAIR;
     }
 }

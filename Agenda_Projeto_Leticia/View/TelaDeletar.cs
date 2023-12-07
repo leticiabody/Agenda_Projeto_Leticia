@@ -33,7 +33,7 @@ namespace Agenda_Projeto_Leticia.View
 
         private void btn_excluirTelaDeletar_Click(object sender, EventArgs e)
         {
-            if(txb_buscarId_TelaDeletar.Text == "")
+            if (txb_buscarId_TelaDeletar.Text == "")
             {
                 MessageBox.Show("Digite a Matricula do usuário");
             }
@@ -42,7 +42,7 @@ namespace Agenda_Projeto_Leticia.View
                 var resposta = MessageBox.Show("Você está excluindo o contato. " + txb_nomeTeladelar.Text
                     + "?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
 
-                if(resposta == DialogResult.Yes)
+                if (resposta == DialogResult.Yes)
                 {
                     Pessoa.Id = Convert.ToInt32(txb_buscarId_TelaDeletar.Text);
 
@@ -59,6 +59,11 @@ namespace Agenda_Projeto_Leticia.View
                     txb_fone_TelaDeletar.Text = "";
                 }
             }
+        }
+
+        private void btnsair_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
         }
     }
 }

@@ -38,6 +38,8 @@
             // btn_Cadastrar
             // 
             btn_Cadastrar.BackColor = SystemColors.GradientInactiveCaption;
+            btn_Cadastrar.BackgroundImageLayout = ImageLayout.None;
+            btn_Cadastrar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             btn_Cadastrar.Location = new Point(29, 108);
             btn_Cadastrar.Name = "btn_Cadastrar";
             btn_Cadastrar.Size = new Size(141, 76);
@@ -49,7 +51,8 @@
             // btn_Pesquisar
             // 
             btn_Pesquisar.BackColor = SystemColors.GradientInactiveCaption;
-            btn_Pesquisar.Location = new Point(256, 108);
+            btn_Pesquisar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btn_Pesquisar.Location = new Point(205, 108);
             btn_Pesquisar.Name = "btn_Pesquisar";
             btn_Pesquisar.Size = new Size(141, 76);
             btn_Pesquisar.TabIndex = 1;
@@ -60,7 +63,8 @@
             // btn_Alterar
             // 
             btn_Alterar.BackColor = SystemColors.GradientInactiveCaption;
-            btn_Alterar.Location = new Point(29, 273);
+            btn_Alterar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btn_Alterar.Location = new Point(29, 216);
             btn_Alterar.Name = "btn_Alterar";
             btn_Alterar.Size = new Size(141, 76);
             btn_Alterar.TabIndex = 2;
@@ -71,7 +75,8 @@
             // btn_Deletar
             // 
             btn_Deletar.BackColor = SystemColors.GradientInactiveCaption;
-            btn_Deletar.Location = new Point(256, 273);
+            btn_Deletar.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btn_Deletar.Location = new Point(205, 216);
             btn_Deletar.Name = "btn_Deletar";
             btn_Deletar.Size = new Size(141, 76);
             btn_Deletar.TabIndex = 3;
@@ -83,7 +88,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(122, 31);
+            label1.Location = new Point(87, 32);
             label1.Name = "label1";
             label1.Size = new Size(199, 30);
             label1.TabIndex = 4;
@@ -94,7 +99,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(427, 397);
+            ClientSize = new Size(383, 352);
             Controls.Add(label1);
             Controls.Add(btn_Deletar);
             Controls.Add(btn_Alterar);

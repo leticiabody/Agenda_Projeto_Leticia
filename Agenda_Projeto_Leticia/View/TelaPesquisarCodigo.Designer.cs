@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox8 = new TextBox();
+            txb_BuscaPorCodigoTelaBuscarporcodigo = new TextBox();
             label4 = new Label();
             groupBox2 = new GroupBox();
             txb_emailTelaBuscarporCodigo = new TextBox();
@@ -38,23 +38,24 @@
             label8 = new Label();
             label7 = new Label();
             btn_BuscarTelaPorCodigo = new Button();
+            btnSAAIRR = new Button();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
-            // textBox8
+            // txb_BuscaPorCodigoTelaBuscarporcodigo
             // 
-            textBox8.BackColor = SystemColors.GradientInactiveCaption;
-            textBox8.BorderStyle = BorderStyle.FixedSingle;
-            textBox8.Location = new Point(124, 51);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(142, 23);
-            textBox8.TabIndex = 11;
+            txb_BuscaPorCodigoTelaBuscarporcodigo.BackColor = SystemColors.GradientInactiveCaption;
+            txb_BuscaPorCodigoTelaBuscarporcodigo.BorderStyle = BorderStyle.FixedSingle;
+            txb_BuscaPorCodigoTelaBuscarporcodigo.Location = new Point(83, 56);
+            txb_BuscaPorCodigoTelaBuscarporcodigo.Name = "txb_BuscaPorCodigoTelaBuscarporcodigo";
+            txb_BuscaPorCodigoTelaBuscarporcodigo.Size = new Size(142, 23);
+            txb_BuscaPorCodigoTelaBuscarporcodigo.TabIndex = 11;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
-            label4.Location = new Point(129, 28);
+            label4.Location = new Point(88, 33);
             label4.Name = "label4";
             label4.Size = new Size(135, 20);
             label4.TabIndex = 9;
@@ -125,7 +126,7 @@
             // 
             // btn_BuscarTelaPorCodigo
             // 
-            btn_BuscarTelaPorCodigo.Location = new Point(282, 51);
+            btn_BuscarTelaPorCodigo.Location = new Point(241, 56);
             btn_BuscarTelaPorCodigo.Name = "btn_BuscarTelaPorCodigo";
             btn_BuscarTelaPorCodigo.Size = new Size(75, 23);
             btn_BuscarTelaPorCodigo.TabIndex = 12;
@@ -133,13 +134,25 @@
             btn_BuscarTelaPorCodigo.UseVisualStyleBackColor = true;
             btn_BuscarTelaPorCodigo.Click += btn_BuscarTelaPorCodigo_Click;
             // 
+            // btnSAAIRR
+            // 
+            btnSAAIRR.BackColor = Color.IndianRed;
+            btnSAAIRR.Location = new Point(340, 12);
+            btnSAAIRR.Name = "btnSAAIRR";
+            btnSAAIRR.Size = new Size(75, 23);
+            btnSAAIRR.TabIndex = 13;
+            btnSAAIRR.Text = "Sair";
+            btnSAAIRR.UseVisualStyleBackColor = false;
+            btnSAAIRR.Click += btnSAAIRR_Click;
+            // 
             // TelaPesquisarCodigo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(427, 397);
+            Controls.Add(btnSAAIRR);
             Controls.Add(btn_BuscarTelaPorCodigo);
-            Controls.Add(textBox8);
+            Controls.Add(txb_BuscaPorCodigoTelaBuscarporcodigo);
             Controls.Add(label4);
             Controls.Add(groupBox2);
             Name = "TelaPesquisarCodigo";
@@ -152,7 +165,7 @@
 
         #endregion
 
-        private TextBox textBox8;
+        private TextBox txb_BuscaPorCodigoTelaBuscarporcodigo;
         private Label label4;
         private GroupBox groupBox2;
         private TextBox txb_emailTelaBuscarporCodigo;
@@ -162,5 +175,6 @@
         private Label label8;
         private Label label7;
         private Button btn_BuscarTelaPorCodigo;
+        private Button btnSAAIRR;
     }
 }

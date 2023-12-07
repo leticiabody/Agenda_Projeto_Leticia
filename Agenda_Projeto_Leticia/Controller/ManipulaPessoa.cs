@@ -52,7 +52,25 @@ namespace Agenda_Projeto_Leticia.Controller
         }
         public void Atualizar()
         {
+            SqlConnection cn = new SqlConnection(Conexao.Conectar());
+            SqlCommand cmd = new SqlCommand("P_AtualizarPessoa", cn);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
+            try
+            {
+                cmd.Parameters.AddWithValue("@Id", Pessoa.Id);
+                cmd.Parameters.AddWithValue("@nome", Pessoa.Nome);
+                cmd.Parameters.AddWithValue("@fone", Pessoa.Fone);
+                cmd.Parameters.AddWithValue("@email", Pessoa.Email);
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Usuario Alterado com sucesso");
+            }
+             catch(Exception)
+            {
+                throw;
+            }
         }
         public void BuscarCodigo()
         {
@@ -64,14 +82,14 @@ namespace Agenda_Projeto_Leticia.Controller
             {
                 cmd.Parameters.AddWithValue("@Id", Pessoa.Id);
                 cn.Open();
-                var DR = cmd.ExecuteReader();
+                var dr = cmd.ExecuteReader();
 
-                if (DR.Read())
+                if (dr.Read())
                 {
-                    Pessoa.Id = Convert.ToInt32(DR["Id"]);
-                    Pessoa.Nome = DR["nome"].ToString();
-                    Pessoa.Fone = DR["fone"].ToString();
-                    Pessoa.Email = DR["email"].ToString();
+                    Pessoa.Id = Convert.ToInt32(dr["Id"]);
+                    Pessoa.Nome = dr["nome"].ToString();
+                    Pessoa.Fone = dr["fone"].ToString();
+                    Pessoa.Email = dr["email"].ToString();
 
                 }
                 else
@@ -89,9 +107,38 @@ namespace Agenda_Projeto_Leticia.Controller
             }
         }
         public void BuscarNome()
-            {
+        {
+            SqlConnection cn = new SqlConnection(Conexao.Conectar());
+            SqlCommand cmd = new SqlCommand("P_VisualizarnomePessoas", cn);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
+            try
+            {
+                cmd.Parameters.AddWithValue("@nome", Pessoa.Nome);
+                cn.Open();
+                var vr  = cmd.ExecuteReader();
+
+                if (vr.Read())
+                {
+                    Pessoa.Id = Convert.ToInt32(vr["Id"]);
+                    Pessoa.Nome = vr["nome"].ToString();
+                    Pessoa.Fone = vr["fone"].ToString();
+                    Pessoa.Email = vr["email"].ToString();
+                }
+                else
+                {
+                    Pessoa.Id = 0;
+                    Pessoa.Nome = "";
+                    Pessoa.Fone = "";
+                    Pessoa.Email = "";
+                    MessageBox.Show("Busca não Executada...");
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        }
     }
-   
-}

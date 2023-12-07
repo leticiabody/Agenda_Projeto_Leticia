@@ -28,5 +28,10 @@ namespace Agenda_Projeto_Leticia.View
             ManipulaPessoa manipulaPessoa = new ManipulaPessoa();
             manipulaPessoa.Cadastrar();
         }
+
+        private void btnSairCadastro_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }

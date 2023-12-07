@@ -36,6 +36,7 @@
             txb_emailCadastro = new TextBox();
             txb_celularCadastro = new TextBox();
             btn_CadastrarTelaCadastro = new Button();
+            btnSairCadastro = new Button();
             SuspendLayout();
             // 
             // label1
@@ -110,12 +111,24 @@
             btn_CadastrarTelaCadastro.UseVisualStyleBackColor = false;
             btn_CadastrarTelaCadastro.Click += btn_CadastrarTelaCadastro_Click;
             // 
+            // btnSairCadastro
+            // 
+            btnSairCadastro.BackColor = Color.IndianRed;
+            btnSairCadastro.Location = new Point(351, 12);
+            btnSairCadastro.Name = "btnSairCadastro";
+            btnSairCadastro.Size = new Size(75, 23);
+            btnSairCadastro.TabIndex = 8;
+            btnSairCadastro.Text = "Sair";
+            btnSairCadastro.UseVisualStyleBackColor = false;
+            btnSairCadastro.Click += btnSairCadastro_Click;
+            // 
             // TelaCadastro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(427, 397);
+            Controls.Add(btnSairCadastro);
             Controls.Add(btn_CadastrarTelaCadastro);
             Controls.Add(txb_celularCadastro);
             Controls.Add(txb_emailCadastro);
@@ -140,5 +153,6 @@
         private TextBox txb_emailCadastro;
         private TextBox txb_celularCadastro;
         private Button btn_CadastrarTelaCadastro;
+        private Button btnSairCadastro;
     }
 }

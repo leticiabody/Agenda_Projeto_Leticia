@@ -21,14 +21,21 @@ namespace Agenda_Projeto_Leticia.View
 
         private void btn_BuscarTelaPesquisar_Click(object sender, EventArgs e)
         {
-            Pessoa.Id = Convert.ToInt32(txb_BuscaPorNome_TelaPesquisa.Text);
+            Pessoa.Nome = (txb_BuscaPorNome_TelaPesquisa.Text);
+
             ManipulaPessoa manipula = new ManipulaPessoa();
-            manipula.BuscarCodigo();
+            manipula.BuscarNome();
+
 
             txb_nomeTelaPesquisar.Text = Pessoa.Nome;
             txb_email_Telapesquisar.Text = Pessoa.Email;
             txb_foneTelaPesquisar.Text = Pessoa.Fone;
-            
+
+        }
+
+        private void btn_SAIR_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
         }
     }
 }

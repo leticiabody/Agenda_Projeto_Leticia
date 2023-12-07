@@ -37,7 +37,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(8, 23);
+            label1.Location = new Point(12, 20);
             label1.Name = "label1";
             label1.Size = new Size(275, 21);
             label1.TabIndex = 0;
@@ -72,7 +72,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(288, 175);
+            ClientSize = new Size(294, 173);
             Controls.Add(btn_porcodigo);
             Controls.Add(btn_pornome);
             Controls.Add(label1);

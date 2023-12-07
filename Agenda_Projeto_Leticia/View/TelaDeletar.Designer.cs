@@ -40,6 +40,7 @@
             txb_buscarId_TelaDeletar = new TextBox();
             btn_excluirTelaDeletar = new Button();
             btn_buscar_TelaDeletar = new Button();
+            btnsair = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -157,12 +158,24 @@
             btn_buscar_TelaDeletar.UseVisualStyleBackColor = false;
             btn_buscar_TelaDeletar.Click += btn_buscar_TelaDeletar_Click;
             // 
+            // btnsair
+            // 
+            btnsair.BackColor = Color.IndianRed;
+            btnsair.Location = new Point(349, 12);
+            btnsair.Name = "btnsair";
+            btnsair.Size = new Size(75, 23);
+            btnsair.TabIndex = 6;
+            btnsair.Text = "Sair";
+            btnsair.UseVisualStyleBackColor = false;
+            btnsair.Click += btnsair_Click;
+            // 
             // TelaDeletar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(427, 397);
+            Controls.Add(btnsair);
             Controls.Add(btn_buscar_TelaDeletar);
             Controls.Add(btn_excluirTelaDeletar);
             Controls.Add(groupBox1);
@@ -191,5 +204,6 @@
         private Button btn_buscar_TelaDeletar;
         private Label label5;
         private TextBox txb_emailTelaDeletar;
+        private Button btnsair;
     }
 }
